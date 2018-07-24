@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Nazwa aplikacji</string>
+    <string name="calendarButton">Uruchom kalendarz</string>
+    <string name="backButton">Wstecz</string>
+</resources>
