@@ -9,11 +9,30 @@
 
     <Button
         android:id="@+id/launchCalendarButton"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="#f69"
         android:text="@string/calendarButton"
-        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/buttonDodajWydatek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#f69"
+        android:gravity="center"
+        android:text="Dodaj wydatek"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
 
 </android.support.constraint.ConstraintLayout>
