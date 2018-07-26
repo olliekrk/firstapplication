@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 EditText mNazwa = (EditText) mView.findViewById(R.id.etName);
                 EditText mData = (EditText) mView.findViewById(R.id.etDate);
                 EditText mKwota = (EditText) mView.findViewById(R.id.etAmount);
-                Button mRodzaj = (Button) mView.findViewById(R.id.buttonTypeOfExpenses);
+
 
                 mBuilder.setView(mView);                                                             //tez wazne
                 AlertDialog dialog = mBuilder.create();
@@ -58,35 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void type(View v){
-        android.support.v7.widget.PopupMenu popup = new android.support.v7.widget.PopupMenu(this,v);  //metoda wybierajaca rodzaj wydatku
-        popup.setOnMenuItemClickListener((PopupMenu.OnMenuItemClickListener) this);
-        popup.inflate(R.menu.popup_type_add_expences);
-        popup.show();
-    }
 
 
-    public boolean onMenuItemClick(MenuItem item){                                                            //rozne przypadki wydatkow, wybieranie
-        switch(item.getItemId()){
-            case R.id.rodzaj1:
-                Toast.makeText(this, "Rodzaj 1",Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.rodzaj2:
-                Toast.makeText(this, "Rodzaj 2",Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.rodzaj3:
-                Toast.makeText(this, "Rodzaj 3",Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.rodzaj4:
-                Toast.makeText(this, "Rodzaj 4",Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.rodzaj5:
-                Toast.makeText(this, "Rodzaj 5",Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return false;
-        }
-    }
+
 
 
 
