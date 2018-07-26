@@ -49,7 +49,7 @@ public class CalendarActivity extends AppCompatActivity {
                         + " - " + (selectedDate.get(Calendar.MONTH) + 1)
                         + " - " + selectedDate.get(Calendar.YEAR)
                         + "\n" + "Wydane: (tu wkleić wydatki)"
-                        + "\n" + "Otrzymane: (tu wkleić datki)"
+                        + "\n" + "Zyskane: (tu wkleić datki)"
                         + "\n" + "Bilans: (tu różnicę)";
 
                 Toast.makeText(CalendarActivity.this, selectedDateText, Toast.LENGTH_SHORT).show();
