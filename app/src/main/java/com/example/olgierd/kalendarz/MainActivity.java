@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 EditText mData = (EditText) mView.findViewById(R.id.etDate);
                 EditText mKwota = (EditText) mView.findViewById(R.id.etAmount);
 
-
                 mBuilder.setView(mView);                                                             //tez wazne
                 AlertDialog dialog = mBuilder.create();
                 dialog.show();
