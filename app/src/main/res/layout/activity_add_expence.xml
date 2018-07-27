@@ -40,16 +40,20 @@
 
         />
 
-    <Button
-        android:id="@+id/buttonTypeOfExpenses"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="rodzaj"
-        android:onClick="type"
-        android:background="@color/colorAccent"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dip"
+        android:text="Kategoria:"
+        android:layout_marginBottom="5dp"/>
 
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:entries="@array/typeOfExpenceArray"
+        android:prompt="@string/typeOfExpence_prompt" />
 
 
     <EditText
@@ -61,5 +65,15 @@
         android:id="@+id/etAmount"
         android:layout_marginTop="10dp"
         />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dodaj"
+        android:onClick="submit"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>

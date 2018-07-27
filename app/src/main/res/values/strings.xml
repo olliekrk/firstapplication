@@ -2,4 +2,18 @@
     <string name="app_name">Nazwa aplikacji</string>
     <string name="calendarButton">Uruchom kalendarz</string>
     <string name="backButton">Wstecz</string>
+
+
+    <string name="typeOfExpence_prompt">Wybierz rodzaj</string>
+    <string-array name="typeOfExpenceArray">
+        <item>Jedzenie</item>
+        <item>Transport</item>
+        <item>Piwo</item>
+        <item>Rozrywka</item>
+        <item>Szkoła</item>
+        <item>Podróże</item>
+        <item>Inne</item>
+    </string-array>
+
+
 </resources>
