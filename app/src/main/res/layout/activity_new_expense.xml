@@ -24,17 +24,10 @@
         android:layout_marginTop="10dp"
         />
 
-
-
-
-
-
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="zmien date"
+        android:hint="@string/chooseDateText"
         android:id="@+id/etDate"
         android:layout_marginTop="5dp"
         />
@@ -49,7 +42,7 @@
 
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/categorySpinner"
         android:layout_width="match_parent"
         android:layout_height="@android:dimen/app_icon_size"
         android:entries="@array/typeOfExpenseArray"
