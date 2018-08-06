@@ -11,11 +11,6 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private Button calendarButton, newExpenseButton;
-    EditText date;                                      //dodawanie wydatku
-    DatePickerDialog datePickerDialog;
-
-    ExpenseDB myDB;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,27 +30,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) { launchNewExpenseDialogActivity();
             }
         });
-        myDB = new ExpenseDB(this);
-
-
-//        Button mDodajWydatek = (Button) findViewById(R.id.buttonDodajWydatek);                      //button dodaj wydatek
-//        mDodajWydatek.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
-//                View mView = getLayoutInflater().inflate(R.layout.activity_add_expence, null);        //ważne, nie do konca wiem dlaczego
-//                EditText mNazwa = (EditText) mView.findViewById(R.id.etName);
-//                EditText mData = (EditText) mView.findViewById(R.id.etDate);
-//                EditText mKwota = (EditText) mView.findViewById(R.id.etAmount);
-//
-//                mBuilder.setView(mView);                                                             //tez wazne
-//                AlertDialog dialog = mBuilder.create();
-//                dialog.show();
-//
-//            }
-//        });
-
-
     }
 
 

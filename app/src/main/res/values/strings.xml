@@ -3,8 +3,8 @@
     <string name="calendarButton">Uruchom kalendarz</string>
     <string name="backButton">Wstecz</string>
 
-
     <string name="typeOfExpence_prompt">Wybierz rodzaj</string>
+    <string name="chooseDateText">Wybierz datę</string>
     <string-array name="typeOfExpenseArray">
         <item>Jedzenie</item>
         <item>Transport</item>
