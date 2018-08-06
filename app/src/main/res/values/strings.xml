@@ -5,7 +5,7 @@
 
 
     <string name="typeOfExpence_prompt">Wybierz rodzaj</string>
-    <string-array name="typeOfExpenceArray">
+    <string-array name="typeOfExpenseArray">
         <item>Jedzenie</item>
         <item>Transport</item>
         <item>Piwo</item>

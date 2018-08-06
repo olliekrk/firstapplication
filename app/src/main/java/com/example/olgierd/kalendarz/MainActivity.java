@@ -2,7 +2,6 @@ package com.example.olgierd.kalendarz;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void launchNewExpenseDialogActivity() {
-        Intent intent = new Intent(this, NewExpenseDialogActivity.class);
+        Intent intent = new Intent(this, NewExpenseActivity.class);
         startActivity(intent);
     }
 

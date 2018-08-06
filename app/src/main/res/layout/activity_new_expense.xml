@@ -31,14 +31,14 @@
 
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="zmien date"
         android:id="@+id/etDate"
         android:layout_marginTop="5dp"
-
         />
+
 
     <TextView
         android:layout_width="fill_parent"
@@ -52,7 +52,7 @@
         android:id="@+id/spinner1"
         android:layout_width="match_parent"
         android:layout_height="@android:dimen/app_icon_size"
-        android:entries="@array/typeOfExpenceArray"
+        android:entries="@array/typeOfExpenseArray"
         android:prompt="@string/typeOfExpence_prompt" />
 
 
