@@ -24,12 +24,13 @@ public class NewExpenseActivity extends AppCompatActivity {
     private EditText mName;
     private EditText mAmount;
     private Button submitButton;
+    private Button allExpensesButton;
     private Spinner mCat;
     private DatePickerDialog.OnDateSetListener mOnDateSetListener;
 
-    private int selectedDay;
-    private int selectedMonth;
-    private int selectedYear;
+    private String selectedDay;
+    private String selectedMonth;
+    private String selectedYear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class NewExpenseActivity extends AppCompatActivity {
         myDB = new ExpenseDB(this);
 
         submitButton = (Button) findViewById(R.id.submitButton);
+        allExpensesButton = (Button) findViewById(R.id.allExpensesButtonDisplay);
         mName = (EditText) findViewById(R.id.etName);
         mAmount = (EditText) findViewById(R.id.etAmount);
         mDate = (TextView) findViewById(R.id.etDate);
@@ -51,13 +53,20 @@ public class NewExpenseActivity extends AppCompatActivity {
             }
         });
 
+        allExpensesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Message.message(getApplicationContext(), myDB.getData());
+            }
+        });
+
         mDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Calendar cal = Calendar.getInstance();
-                selectedYear = cal.get(Calendar.YEAR);
-                selectedMonth = cal.get(Calendar.MONTH);
-                selectedDay = cal.get(Calendar.DAY_OF_MONTH);
+                int selectedYear = cal.get(Calendar.YEAR);
+                int selectedMonth = cal.get(Calendar.MONTH);
+                int selectedDay = cal.get(Calendar.DAY_OF_MONTH);
 
                 DatePickerDialog dialog = new DatePickerDialog(NewExpenseActivity.this,
                         android.R.style.Theme_Black,
@@ -77,9 +86,9 @@ public class NewExpenseActivity extends AppCompatActivity {
                 String date = day + "." + month + "." + year;
                 mDate.setText(date);
 
-                selectedDay = day;
-                selectedMonth = month;
-                selectedYear = year;
+                selectedDay = "" + day;
+                selectedMonth = "" + month;
+                selectedYear = "" + year;
             }
         };
     }
@@ -87,7 +96,7 @@ public class NewExpenseActivity extends AppCompatActivity {
     private void insertToDB() {
         String name = mName.getText().toString();
         String cat = mCat.getSelectedItem().toString();
-        Double amount = Double.parseDouble(mAmount.toString());
+        String amount = mAmount.getText().toString();
 
         try {
             long id = myDB.insertData(name, cat, amount, selectedDay, selectedMonth, selectedYear);
@@ -95,11 +104,13 @@ public class NewExpenseActivity extends AppCompatActivity {
                 Message.message(getApplicationContext(), "Insertion was unsuccesful");
             else
                 Message.message(getApplicationContext(), "Expense inserted succesfully");
-            mDate.setText("Wybierz datę");
-            mAmount.setText("Kwota");
-            mName.setText("Nazwa");
+            mDate.setText("");
+            mAmount.setText("");
+            mName.setText("");
         } catch (Exception e) {
             Message.message(getApplicationContext(), "" + e);
         }
     }
+
+
 }

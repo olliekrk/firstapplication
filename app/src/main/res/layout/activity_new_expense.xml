@@ -41,14 +41,14 @@
         android:layout_marginBottom="10dp"
         android:hint="zmien date"
         android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner1"
-        app:layout_constraintEnd_toEndOf="@+id/spinner1"
-        app:layout_constraintStart_toStartOf="@+id/spinner1"
+        app:layout_constraintBottom_toTopOf="@+id/categorySpinner"
+        app:layout_constraintEnd_toEndOf="@+id/categorySpinner"
+        app:layout_constraintStart_toStartOf="@+id/categorySpinner"
         app:layout_constraintTop_toBottomOf="@+id/etName" />
 
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/categorySpinner"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -75,7 +75,7 @@
         app:layout_constraintBottom_toTopOf="@+id/submitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+        app:layout_constraintTop_toBottomOf="@+id/categorySpinner" />
 
     <Button
         android:id="@+id/submitButton"
@@ -83,13 +83,25 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="195dp"
         android:background="@color/colorAccent"
-        android:onClick="submitExpense"
         android:text="Dodaj"
         android:textColor="@android:color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/etAmount"
         app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/etAmount"
+        app:layout_constraintTop_toBottomOf="@+id/etAmount" />
+
+    <Button
+        android:id="@+id/allExpensesButtonDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="195dp"
+        android:background="@color/colorAccent"
+        android:text="Wyswietl"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/etAmount"
         app:layout_constraintTop_toBottomOf="@+id/etAmount" />
 

@@ -26,10 +26,10 @@ public class ExpenseDB {
                         + ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                         + NAME + " VARCHAR(255) ,"
                         + CAT + " VARCHAR(255) ,"
-                        + AMOUNT + " INTEGER ,"
-                        + DAY + " INTEGER ,"
-                        + MONTH + " INTEGER ,"
-                        + YEAR + " INTEGER );";
+                        + AMOUNT + " VARCHAR(255) ,"
+                        + DAY + " VARCHAR(255) ,"
+                        + MONTH + " VARCHAR(255) ,"
+                        + YEAR + " VARCHAR(255) );";
         private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
         private Context context;
@@ -66,7 +66,7 @@ public class ExpenseDB {
         helper = new expenseDbHelper(context);
     }
 
-    public long insertData(String name, String category, double amount, int day, int month, int year) {
+    public long insertData(String name, String category, String amount, String day, String month, String year) {
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(expenseDbHelper.NAME, name);
@@ -84,8 +84,8 @@ public class ExpenseDB {
         String[] columns = {
                 expenseDbHelper.ID,
                 expenseDbHelper.NAME,
-                expenseDbHelper.AMOUNT,
                 expenseDbHelper.CAT,
+                expenseDbHelper.AMOUNT,
                 expenseDbHelper.DAY,
                 expenseDbHelper.MONTH,
                 expenseDbHelper.YEAR
@@ -96,10 +96,10 @@ public class ExpenseDB {
             int id = cursor.getInt(cursor.getColumnIndex(expenseDbHelper.ID));
             String name = cursor.getString(cursor.getColumnIndex(expenseDbHelper.NAME));
             String cat = cursor.getString(cursor.getColumnIndex(expenseDbHelper.CAT));
-            double amount = cursor.getDouble(cursor.getColumnIndex(expenseDbHelper.AMOUNT));
-            int day = cursor.getInt(cursor.getColumnIndex(expenseDbHelper.DAY));
-            int month = cursor.getInt(cursor.getColumnIndex(expenseDbHelper.MONTH));
-            int year = cursor.getInt(cursor.getColumnIndex(expenseDbHelper.YEAR));
+            String amount = cursor.getString(cursor.getColumnIndex(expenseDbHelper.AMOUNT));
+            String day = cursor.getString(cursor.getColumnIndex(expenseDbHelper.DAY));
+            String month = cursor.getString(cursor.getColumnIndex(expenseDbHelper.MONTH));
+            String year = cursor.getString(cursor.getColumnIndex(expenseDbHelper.YEAR));
             buffer.append(id + ". " + cat + ": " + name + " " + amount + "PLN " + day + "-" + month + "-" + year + "\n");
         }
         return buffer.toString();
