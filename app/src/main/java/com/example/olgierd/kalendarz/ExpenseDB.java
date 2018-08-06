@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class Expense {
+public class ExpenseDB {
 
     static class expenseDbHelper extends SQLiteOpenHelper {
         private static final String DATABASE_NAME = "expensesDatabase";
@@ -25,7 +25,7 @@ public class Expense {
                 "CREATE TABLE " + TABLE_NAME + " ("
                         + ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                         + NAME + " VARCHAR(255) ,"
-                        + CAT + " VARCHAR(225) ,"
+                        + CAT + " VARCHAR(255) ,"
                         + AMOUNT + " INTEGER ,"
                         + DAY + " INTEGER ,"
                         + MONTH + " INTEGER ,"
@@ -62,7 +62,7 @@ public class Expense {
 
     expenseDbHelper helper;
 
-    public Expense(Context context) {
+    public ExpenseDB(Context context) {
         helper = new expenseDbHelper(context);
     }
 

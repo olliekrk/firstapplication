@@ -71,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Dodaj"
-        android:onClick="submit"
+        android:onClick="submitExpense"
         android:background="@color/colorAccent"
         android:textColor="@android:color/white"
         android:layout_marginTop="10dp" />
