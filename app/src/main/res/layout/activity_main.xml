@@ -9,9 +9,9 @@
 
     <Button
         android:id="@+id/launchCalendarButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="#f69"
         android:text="@string/calendarButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,14 +24,15 @@
         android:id="@+id/buttonDodajWydatek"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="#f69"
         android:gravity="center"
         android:text="Dodaj wydatek"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/launchCalendarButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/launchCalendarButton"
+        app:layout_constraintTop_toBottomOf="@+id/launchCalendarButton"
         tools:ignore="MissingConstraints" />
 
 
