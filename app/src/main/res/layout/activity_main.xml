@@ -7,33 +7,34 @@
     tools:context=".MainActivity">
 
 
-    <Button
+    <ImageButton
         android:id="@+id/launchCalendarButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="#f69"
-        android:text="@string/calendarButton"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="81dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="76dp"
+        android:background="#00000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@mipmap/ic_calendar" />
 
 
-    <Button
+    <!--Button
         android:id="@+id/buttonDodajWydatek"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="311dp"
         android:layout_marginTop="8dp"
         android:background="#f69"
         android:gravity="center"
         android:text="Dodaj wydatek"
         android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/launchCalendarButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/launchCalendarButton"
         app:layout_constraintTop_toBottomOf="@+id/launchCalendarButton"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" /-->
 
 
 </android.support.constraint.ConstraintLayout>
